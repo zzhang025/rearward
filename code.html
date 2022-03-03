@@ -54,17 +54,57 @@
                 <div class="col-lg-8">
                     <pre class="line-numbers">
                         <code class="language-js">
-                            //Call hello world
-                            function Helloworld(){
-                                alert("hello world");
-                            }
+                            //Get the value from the page
+
+//Controller Function
+function getInput(){
+
+    document.getElementById('alert').classList.add("invisible");
+
+    let inputstring = document.getElementById('inputString').value;
+
+    let revstring = reverseString(inputstring);
+
+    display(revstring);
+}
+
+//Reverse the String
+//logic function
+function reverseString(inputstring){
+
+    let revstring=[];
+
+    // for loop
+
+    for (let index = inputstring.length-1; index >= 0 ; index--) {
+        revstring += inputstring[index];  
+    }
+    return revstring;
+}
+
+//Display the Message
+//View function
+function display(revstring){
+
+    //make the alert visible
+    document.getElementById('alert').classList.remove("invisible");
+
+    //display the message
+    document.getElementById('msg').innerHTML = `Your String reversed is: ${revstring}`;
                         </code>
                     </pre>
                 </div>
                 <div class="col-lg-4">
-                    <p>The code is structured in one function.</p>
-                    <h5>Hello World</h5>
-                    <p>Hello World is a function that displays an alert with a message of "hello world"</p>
+                    <h5>Function getValues()</h5><br>
+                    <p>This function will receive inputstring from the page.
+                    </p><br>
+                    <p class="mt-5">Other functions reverseString(), display() are also called in here.</p><br>
+                    <h5 class="mt-5 mb-5">Function reverseString()</h5><br>
+                    <p class="mt-5 mb-5"><br>
+                        Using <em>"for loop"</em> to reset the index backwards to reverse the string 
+                    </p><br>
+                    <h5>Function display()</h5><br>
+                    <p>This function will display the reversed string and make the "alert" visible to inform the user that the process is complete.</p><br>
                 </div>
             </div>
         </div>

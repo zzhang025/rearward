@@ -20,7 +20,7 @@ function reverseString(inputstring){
 
     // for loop
 
-    for (let index = inputstring.length; index >= 0 ; index--) {
+    for (let index = inputstring.length-1; index >= 0 ; index--) {
         revstring += inputstring[index];  
     }
     return revstring;
